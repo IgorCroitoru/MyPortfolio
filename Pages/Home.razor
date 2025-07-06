@@ -4,81 +4,160 @@
 
 @* <h1 class="p- mb-3 text-lg">Hello, world!</h1> *@
 <div class="content">
-     
-    <GlowCard class="">
-    <div class="bg-gradient-to-tl pointer-events-none absolute inset-0 from-purple-300/20 via-transparent to-transparent"></div>
+    @* Desktop view *@
+     <div class="hidden flex-col gap-3 md:flex md:flex-row">
+        <GlowCard class="max-w-[28rem]">
+            <div class="bg-gradient-to-tl pointer-events-none absolute inset-0 from-purple-300/20 via-transparent to-transparent"></div>
 
-        <div class="flex w-full">
-            <Image 
-                   Alt="Igor Croitoru's avatar"
-                   class="h-20 w-20 min-w-20 md:h-40 md:w-40"
+            <div class="flex w-full">
+                
 
-              />
-
-            <div class="ml-3 flex-1">
-                <div class="flex flex-col-reverse justify-between gap-2 md:flex-row">
-                    <div>
-                        <div class="inline-flex h-4 flex-row items-center gap-1 rounded-xl border bg-[var(--color-bg-second)] px-2">
-                            <div class="h-2 w-2 items-center rounded-full border-2 border-[var(--color-border) bg-green-500" ></div>
-                            <p class="font-semibold whitespace-nowrap text-[11px]">Available to work</p>
+                <div class="ml-3 flex-1">
+                    <div class="flex flex-col-reverse justify-between gap-2 md:flex-row">
+                        <div>
+                            <div class="inline-flex h-4 flex-row items-center gap-1 rounded-xl border bg-[var(--color-bg-second)] px-2">
+                                <div class="h-2 w-2 items-center rounded-full border-2 border-[var(--color-border) bg-green-500" ></div>
+                                <p class="font-semibold whitespace-nowrap text-[11px]">Available to work</p>
+                            </div>
+                            <span class="block text-xl font-bold whitespace-nowrap"> Igor Croitoru</span>
                         </div>
-                        <span class="block text-xl font-bold whitespace-nowrap"> Igor Croitoru</span>
-                    </div>
-                    <div class="flex gap-1 md:justify-end">
-                        <a href="mailto:croitoruigor@yahoo.com" aria-label="Email">
-                            <div class="rounded-md border border-[var(--color-border)] p-[10px] hover:shadow-[inset_0_0_5px_2px_rgba(250,216,255,0.1)]">
-                                <div class="h-[15px] w-[15px]">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                        <path d="M64 112c-8.8.0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1.0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16h384c8.8.0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64h384c35.3.0 64 28.7 64 64v256c0 35.3-28.7 64-64 64H64c-35.3.0-64-28.7-64-64V128z" fill="#fff">
+                        <div class="flex gap-1 md:justify-end">
+                            <a href="mailto:croitoruigor@yahoo.com" aria-label="Email">
+                                <div class="rounded-md border border-[var(--color-border)] p-[10px] hover:shadow-[inset_0_0_5px_2px_rgba(250,216,255,0.1)]">
+                                    <div class="h-[15px] w-[15px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path d="M64 112c-8.8.0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1.0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16h384c8.8.0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64h384c35.3.0 64 28.7 64 64v256c0 35.3-28.7 64-64 64H64c-35.3.0-64-28.7-64-64V128z" fill="#fff">
 
-                                        </path>
-                                    </svg>
+                                            </path>
+                                        </svg>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                        <a href="https://github.com/IgorCroitoru" aria-label="Github profile">
-                            <div class="rounded-md border border-[var(--color-border)] p-[10px] hover:shadow-[inset_0_0_5px_2px_rgba(250,216,255,0.1)]">
-                                <div class="h-[15px] w-[15px]">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
-                                        <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6.0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6.0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3.0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1.0-6.2-.3-40.4-.3-61.4.0.0-70 15-84.7-29.8.0.0-11.4-29.1-27.8-36.6.0.0-22.9-15.7 1.6-15.4.0.0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5.0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9.0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4.0 33.7-.3 75.4-.3 83.6.0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6.0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9.0-6.2-1.4-2.3-4-3.3-5.6-2z" fill="#fff">
-                                        </path>
-                                    </svg>
+                            </a>
+                            <a href="https://github.com/IgorCroitoru" aria-label="Github profile">
+                                <div class="rounded-md border border-[var(--color-border)] p-[10px] hover:shadow-[inset_0_0_5px_2px_rgba(250,216,255,0.1)]">
+                                    <div class="h-[15px] w-[15px]">
+                                        <img src="svg/github.svg" alt="GitHub" />
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                        <a href="https://www.linkedin.com/in/igor-croitoru-8b4411290/" aria-label="Linkedin profile">
-                            <div class="rounded-md border border-[var(--color-border)] p-[10px] hover:shadow-[inset_0_0_5px_2px_rgba(250,216,255,0.1)]">
-                                <div class="h-[15px] w-[15px]">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#FFFFFF" version="1.1"  viewBox="0 0 93.06 93.06" xml:space="preserve">
-                                        <g>
-	                                        <g>
-		                                        <path d="M11.185,0.08C5.004,0.08,0.001,5.092,0,11.259c0,6.173,5.003,11.184,11.186,11.184c6.166,0,11.176-5.011,11.176-11.184    C22.362,5.091,17.351,0.08,11.185,0.08z"/>
-		                                        <rect x="1.538" y="30.926" width="19.287" height="62.054"/>
-		                                        <path d="M69.925,29.383c-9.382,0-15.673,5.144-18.248,10.022h-0.258v-8.479H32.921H32.92v62.053h19.27V62.281    c0-8.093,1.541-15.932,11.575-15.932c9.89,0,10.022,9.256,10.022,16.451v30.178H93.06V58.942    C93.06,42.235,89.455,29.383,69.925,29.383z"/>
-	                                        </g>
-                                        </g>
-                                    </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/igor-croitoru-8b4411290/" aria-label="Linkedin profile">
+                                <div class="rounded-md border border-[var(--color-border)] p-[10px] hover:shadow-[inset_0_0_5px_2px_rgba(250,216,255,0.1)]">
+                                    <div class="h-[15px] w-[15px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#FFFFFF" version="1.1"  viewBox="0 0 93.06 93.06" xml:space="preserve">
+                                            <g>
+	                                            <g>
+		                                            <path d="M11.185,0.08C5.004,0.08,0.001,5.092,0,11.259c0,6.173,5.003,11.184,11.186,11.184c6.166,0,11.176-5.011,11.176-11.184    C22.362,5.091,17.351,0.08,11.185,0.08z"/>
+		                                            <rect x="1.538" y="30.926" width="19.287" height="62.054"/>
+		                                            <path d="M69.925,29.383c-9.382,0-15.673,5.144-18.248,10.022h-0.258v-8.479H32.921H32.92v62.053h19.27V62.281    c0-8.093,1.541-15.932,11.575-15.932c9.89,0,10.022,9.256,10.022,16.451v30.178H93.06V58.942    C93.06,42.235,89.455,29.383,69.925,29.383z"/>
+	                                            </g>
+                                            </g>
+                                        </svg>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="flex items-center text-gray-400">
-                    <div class="h-[0.6rem] w-[0.6rem] flex-shrink-0">
-                        <svg style="margin:0" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 3.5C6 2.67157 6.67157 2 7.5 2S9 2.67157 9 3.5 8.32843 5 7.5 5C6.67157 5 6 4.32843 6 3.5zM8 5.94999C9.14112 5.71836 10 4.70948 10 3.5 10 2.11929 8.88071 1 7.5 1 6.11929 1 5 2.11929 5 3.5c0 1.20948.85888 2.21836 2 2.44999V13.5c0 .2761.22386.5.5.5s.5-.2239.5-.5V5.94999z" fill="currentcolor" fill-rule="evenodd" clip-rule="evenodd">
-                            </path>
-                        </svg>
+                    <div class="flex items-center text-gray-400">
+                        <div class="h-[0.6rem] w-[0.6rem] flex-shrink-0">
+                            <svg style="margin:0" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 3.5C6 2.67157 6.67157 2 7.5 2S9 2.67157 9 3.5 8.32843 5 7.5 5C6.67157 5 6 4.32843 6 3.5zM8 5.94999C9.14112 5.71836 10 4.70948 10 3.5 10 2.11929 8.88071 1 7.5 1 6.11929 1 5 2.11929 5 3.5c0 1.20948.85888 2.21836 2 2.44999V13.5c0 .2761.22386.5.5.5s.5-.2239.5-.5V5.94999z" fill="currentcolor" fill-rule="evenodd" clip-rule="evenodd">
+                                </path>
+                            </svg>
+                        </div>
+                        <span class="text-[0.6rem]">Suceava, România  -  Ungheni, Moldova</span>
                     </div>
-                    <span class="text-[0.6rem]">Suceava, România  -  Ungheni, Moldova</span
-                </div>
-                <div class="mt-2 text-[0.9rem]">
-                    Hello, I am versatile <span class="inline-block font-bold text-[var(--color-accent)]">Full-Stack Web Developer</span> with professional experience working in a company evironment 
-                    and a passion for delivering clean, reliable solutions.
+                    <div class="mt-2 text-[0.9rem]">
+                        Hello, I am versatile <span class="inline-block font-bold text-[var(--color-accent)]">Full-Stack Web Developer</span> with professional experience working in a company evironment 
+                        and a passion for delivering clean, reliable solutions.
+                    </div>
                 </div>
             </div>
-        </div>
-    </GlowCard>
+        </GlowCard>
+        <Image 
+            Alt="Igor Croitoru's avatar"
+            class="w-35 flex-shrink-0" 
+        />
+    </div>
+     
+    @* Mobile view *@
+    <div class="flex flex-col gap-3 md:hidden md:flex-row">
+        <GlowCard class="max-w-[28rem]">
+            <div class="bg-gradient-to-tl pointer-events-none absolute inset-0 from-purple-300/20 via-transparent to-transparent"></div>
+
+            <div class="flex w-full">
+                <div class="flex-1">
+                    <div class="flex flex-row justify-between gap-2">
+                        
+                        <div class="flex flex-col-reverse justify-between gap-2 md:flex-row">
+                            <div>
+                                <div class="inline-flex h-4 flex-row items-center gap-1 rounded-xl border bg-[var(--color-bg-second)] px-2">
+                                    <div class="h-2 w-2 items-center rounded-full border-2 border-[var(--color-border) bg-green-500" ></div>
+                                    <p class="font-semibold whitespace-nowrap text-[11px]">Available to work</p>
+                                </div>
+                                <span class="block text-lg font-bold whitespace-nowrap">Igor Croitoru</span>
+                            </div>
+                            <div class="flex gap-1 md:justify-end">
+                                <a href="mailto:croitoruigor@yahoo.com" aria-label="Email">
+                                    <div class="rounded-md border border-[var(--color-border)] p-[10px] hover:shadow-[inset_0_0_5px_2px_rgba(250,216,255,0.1)]">
+                                        <div class="h-[15px] w-[15px]">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path d="M64 112c-8.8.0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1.0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16h384c8.8.0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64h384c35.3.0 64 28.7 64 64v256c0 35.3-28.7 64-64 64H64c-35.3.0-64-28.7-64-64V128z" fill="#fff">
+
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/IgorCroitoru" aria-label="Github profile">
+                                    <div class="rounded-md border border-[var(--color-border)] p-[10px] hover:shadow-[inset_0_0_5px_2px_rgba(250,216,255,0.1)]">
+                                        <div class="h-[15px] w-[15px]">
+                                            <img src="svg/github.svg" alt="GitHub" />
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="https://www.linkedin.com/in/igor-croitoru-8b4411290/" aria-label="Linkedin profile">
+                                    <div class="rounded-md border border-[var(--color-border)] p-[10px] hover:shadow-[inset_0_0_5px_2px_rgba(250,216,255,0.1)]">
+                                        <div class="h-[15px] w-[15px]">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#FFFFFF" version="1.1"  viewBox="0 0 93.06 93.06" xml:space="preserve">
+                                                <g>
+                                                    <g>
+                                                        <path d="M11.185,0.08C5.004,0.08,0.001,5.092,0,11.259c0,6.173,5.003,11.184,11.186,11.184c6.166,0,11.176-5.011,11.176-11.184    C22.362,5.091,17.351,0.08,11.185,0.08z"/>
+                                                        <rect x="1.538" y="30.926" width="19.287" height="62.054"/>
+                                                        <path d="M69.925,29.383c-9.382,0-15.673,5.144-18.248,10.022h-0.258v-8.479H32.921H32.92v62.053h19.27V62.281    c0-8.093,1.541-15.932,11.575-15.932c9.89,0,10.022,9.256,10.022,16.451v30.178H93.06V58.942    C93.06,42.235,89.455,29.383,69.925,29.383z"/>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="relative inline-block">
+                            <Image 
+                                Alt="Igor Croitoru's avatar"
+                                Class="w-full h-full"
+                            />
+                        </div>
+                       
+                        
+                    </div>
+                    <div class="flex items-center text-gray-400">
+                        <div class="h-[0.6rem] w-[0.6rem] flex-shrink-0">
+                            <svg style="margin:0" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 3.5C6 2.67157 6.67157 2 7.5 2S9 2.67157 9 3.5 8.32843 5 7.5 5C6.67157 5 6 4.32843 6 3.5zM8 5.94999C9.14112 5.71836 10 4.70948 10 3.5 10 2.11929 8.88071 1 7.5 1 6.11929 1 5 2.11929 5 3.5c0 1.20948.85888 2.21836 2 2.44999V13.5c0 .2761.22386.5.5.5s.5-.2239.5-.5V5.94999z" fill="currentcolor" fill-rule="evenodd" clip-rule="evenodd">
+                                </path>
+                            </svg>
+                        </div>
+                        <span class="text-[0.6rem]">Suceava, România  -  Ungheni, Moldova</span>
+                    </div>
+                    <div class="mt-2 text-[0.75rem]">
+                        Hello, I am versatile <span class="inline-block font-bold text-[var(--color-accent)]">Full-Stack Web Developer</span> with professional experience working in a company evironment 
+                        and a passion for delivering clean, reliable solutions.
+                    </div>
+                </div>
+            </div>
+        </GlowCard>
+    </div>
     <GlowCard class="mt-2">
          <div>
         <p class="mb-3 text-center font-semibold text-[1.2rem]">My tech stacks</p>
@@ -98,6 +177,103 @@
 
     </div>
     </GlowCard>
+    <h2 class="mt-4 text-center text-2xl font-bold">A small selection of my recent projects</h2>
+    <div class="mt-1.5 grid grid-cols-1 gap-2 md:grid-cols-2">
+        <GlowCard
+            Class="h-full flex flex-col"
+            >
+        <Image
+         FallbackText="Image coming soon"    
+        >
+            
+        </Image>
+        <div class="p-2 flex-grow">
+            <h3 class="mb-1 font-semibold text-[0.9rem]">Virtual Spaces for Real Connection</h3>
+            <p class="text-xs text-gray-500">Interactive Web App that lets you create interactive virtual rooms where people can meet, 
+                move around, and collaborate naturally—just like in real life. Host team hangouts, 
+                workshops, or social events in beautiful, customizable spaces that feel personal and engaging.</p>
+        </div>
+        <div class="flex flex-col gap-1 mt-auto">
+            <div class="flex items-center">
+                <div class="relative z-10 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] p-[0.4rem] first:ml-0">
+                    <img src="svg/nextjs.svg" alt="NextJs" title="NextJs" class="h-3 w-3" />
+                </div>
+                <div class="relative z-20 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] p-[0.4rem]">
+                    <img src="svg/nestjs.svg" alt="NestJs" title="NestJs" class="h-3 w-3"/>
+                </div>
+                <div class="relative z-30 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] p-[0.4rem]">
+                    <img src="svg/tailwind.svg" alt="Tailwind" title="Tailwind" class="h-3 w-3" />
+                </div>
+                <div class="relative z-40 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] p-[0.4rem]">
+                    <img src="svg/livekit.svg" alt="Livekit" title="LiveKit" class="h-3 w-3" />
+                </div>
+                <div class="relative z-50 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] p-[0.4rem]">
+                    <img src="svg/socketio.svg" alt="Socket.io" title="Socket.io" class="h-3 w-3" />
+                </div>
+               
+            </div>
+            <div class="flex items-center">
+                <div class="relative z-10 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] p-[0.4rem] first:ml-0">
+                    <img src="svg/phaser-pixel-small-flat.png" alt="Phaser" title="Phaser" class="h-2"  />
+                </div>
+                <div class="relative z-20 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] p-[0.4rem]">
+                    <img src="svg/colyseus-long.png" alt="Colyseus" title="Colyseus" class="h-2" />
+                </div>
+            </div>
+        </div>
+
+    </GlowCard>
+        <GlowCard
+            Class="h-full flex flex-col"
+            >
+        <Image
+         FallbackText="Image coming soon"    
+        >
+            
+        </Image>
+        <div class="p-2">
+            <h3 class="mb-1 font-semibold text-[0.9rem]">Guess Mate Online</h3>
+            <p class="text-xs text-gray-500">Guess Mate Online is a fast-paced multiplayer word game inspired by the classic Wordle experience. 
+                In this competitive twist, you and your opponents race in real time to crack the hidden word before anyone else. 
+                You can create custom game rooms and adjust the language to your liking. 
+                Whether you’re challenging friends or climbing the global leaderboard, Guess Mate Online offers an addictive, 
+                social way to test your vocabulary and reflexes.</p>
+        </div>
+        <div class="flex flex-row justify-between">
+            <div class="flex flex-col gap-1">
+                <div class="flex items-center">
+                    <div class="relative z-10 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] p-[0.4rem] first:ml-0">
+                        <img src="svg/nextjs.svg" alt="NextJs" title="NextJs"  class="h-3 w-3" />
+                    </div>
+                    <div class="relative z-20 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] p-[0.4rem]">
+                        <img src="svg/express.svg" alt="Express" title="Express" class="h-3 w-3"/>
+                    </div>
+                    <div class="relative z-30 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] p-[0.4rem]">
+                        <img src="svg/tailwind.svg" alt="Tailwind" title="Tailwind" class="h-3 w-3" />
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div class="relative z-20 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] p-[0.4rem] first:ml-0">
+                        <img src="svg/colyseus-long.png" alt="Colyseus" title="Colyseus" class="h-2" />
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <a 
+                    href="https://github.com/IgorCroitoru/guess-mate-online" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center gap-1 rounded-lg bg-[var(--color-bg-second)] px-2 py-1 text-xs transition-colors hover:bg-[var(--color-bg-second-hover)]"
+                >
+                    <img src="svg/github.svg" alt="GitHub" class="w-3 h-3" />
+                    GitHub
+                </a>
+            </div>
+        </div>
+        
+
+    </GlowCard>
+    </div>
    
 </div>
 

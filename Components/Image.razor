@@ -1,14 +1,17 @@
 ﻿<div class=@DivClass>
-    @if (!string.IsNullOrEmpty(Src))
+    @ChildContent
+    @if (!string.IsNullOrEmpty(Src) && !imageError)
     {
         <img src="@Src"
              alt="@Alt"
-             class="h-full w-full object-cover shadow" />
+             class="h-full w-full object-cover shadow"
+             @onload="OnImageLoad"
+             @onerror="OnImageError"/>
     }
     else
     {
-        <span class="p-4 text-left text-xs font-bold text-[var(--color-text-muted)] md:text-xl">
-            My photo<br />coming soon
+        <span class="p-4 text-center text-xs leading-relaxed font-bold break-words hyphens-auto text-[var(--color-text-muted)] md:text-xl">
+            @((MarkupString)FallbackText)
         </span>
     }
 </div>
@@ -18,14 +21,42 @@
     public string? Src { get; set; }
 
     [Parameter]
-    public string Alt { get; set; }
+    public RenderFragment? ChildContent { get; set; }
+    
+    [Parameter]
+    public string? Alt { get; set; }
 
     [Parameter]
     public string? Class { get; set; }
 
+    [Parameter]
+    public string FallbackText { get; set; } = "My photo coming soon";
+
+    private bool imageError = false;
+
     private string DivClass =>
      $"{Class} " +
      $"flex items-center justify-center overflow-hidden rounded-md border border-[var(--color-border)] " +
-     $"{(string.IsNullOrEmpty(Src) ? "bg-gradient-to-r from-[#261c2b] to-[#584d77]" : "")} ";
+     $"{(string.IsNullOrEmpty(Src) || imageError ? "bg-gradient-to-r from-[#261c2b] to-[#584d77]" : "")} ";
 
+    private void OnImageLoad()
+    {
+        imageError = false;
+        StateHasChanged();
+    }
+
+    private void OnImageError()
+    {
+        imageError = true;
+        StateHasChanged();
+    }
+
+    protected override void OnParametersSet()
+    {
+        // Reset error state when Src changes
+        if (!string.IsNullOrEmpty(Src))
+        {
+            imageError = false;
+        }
+    }
 }
