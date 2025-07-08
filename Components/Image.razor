@@ -4,7 +4,7 @@
     {
         <img src="@Src"
              alt="@Alt"
-             class="h-full w-full object-cover shadow"
+             class=@(ImgClass + " h-full w-full object-cover shadow")
              @onload="OnImageLoad"
              @onerror="OnImageError"/>
     }
@@ -22,7 +22,9 @@
 
     [Parameter]
     public RenderFragment? ChildContent { get; set; }
-    
+
+    [Parameter] 
+    public string ImgClass { get; set; } = "";
     [Parameter]
     public string? Alt { get; set; }
 

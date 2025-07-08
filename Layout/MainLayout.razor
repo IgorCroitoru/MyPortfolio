@@ -16,7 +16,7 @@
 
     <!-- Content container (fully opaque) -->
     <div class="relative h-full w-full overflow-y-auto">
-        <Header />
+        @* <Header /> *@
 
      
         <main class="rou mx-auto my-0 mt-[3rem] max-w-[40rem]">
@@ -24,5 +24,18 @@
                 @Body
             </article>
         </main>
+        <footer class="mt-10">
+            @* Mobile *@
+            <div class="md:hidden block  text-center bg-[var(--color-bg-main)] py-5 opacity-90">
+                <p class="text-xs text-gray-500">
+                    Copyright ©2025 Igor Croitoru.
+                </p>
+            </div>
+            @* Desktop *@
+            <div class="md:block hidden py-7">
+                <p class="text-xs pl-3">Copyright ©2025 Igor Croitoru</p>
+            </div>
+
+        </footer>
     </div>
 </div>

@@ -7,7 +7,7 @@
     @* Desktop view *@
      <div class="hidden flex-col gap-3 md:flex md:flex-row">
         <GlowCard class="max-w-[28rem]">
-            <div class="bg-gradient-to-tl pointer-events-none absolute inset-0 from-purple-300/20 via-transparent to-transparent"></div>
+            @* <div class="bg-gradient-to-tl pointer-events-none absolute inset-0 from-purple-300/20 via-transparent to-transparent"></div> *@
 
             <div class="flex w-full">
                 
@@ -75,14 +75,15 @@
         </GlowCard>
         <Image 
             Alt="Igor Croitoru's avatar"
-            class="w-35 flex-shrink-0" 
+            class="w-35 flex-shrink-0"
+            ImgClass="scale-[1.5]"
+            Src="images/me.jpg"
         />
     </div>
      
     @* Mobile view *@
     <div class="flex flex-col gap-3 md:hidden md:flex-row">
         <GlowCard class="max-w-[28rem]">
-            <div class="bg-gradient-to-tl pointer-events-none absolute inset-0 from-purple-300/20 via-transparent to-transparent"></div>
 
             <div class="flex w-full">
                 <div class="flex-1">
@@ -135,7 +136,8 @@
                         <div class="relative inline-block">
                             <Image 
                                 Alt="Igor Croitoru's avatar"
-                                Class="w-full h-full"
+                                Class=" h-[150px] w-[150px] object-cover"
+                                Src="images/me.jpg"
                             />
                         </div>
                        
@@ -178,101 +180,151 @@
     </div>
     </GlowCard>
     <h2 class="mt-4 text-center text-2xl font-bold">A small selection of my recent projects</h2>
-    <div class="mt-1.5 grid grid-cols-1 gap-2 md:grid-cols-2">
+    <div class="mt-1.5 grid grid-cols-1 gap-2">
         <GlowCard
-            Class="h-full flex flex-col"
-            >
-        <Image
-         FallbackText="Image coming soon"    
-        >
-            
-        </Image>
-        <div class="p-2 flex-grow">
-            <h3 class="mb-1 font-semibold text-[0.9rem]">Virtual Spaces for Real Connection</h3>
-            <p class="text-xs text-gray-500">Interactive Web App that lets you create interactive virtual rooms where people can meet, 
-                move around, and collaborate naturally—just like in real life. Host team hangouts, 
-                workshops, or social events in beautiful, customizable spaces that feel personal and engaging.</p>
-        </div>
-        <div class="flex flex-col gap-1 mt-auto">
-            <div class="flex items-center">
-                <div class="relative z-10 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] p-[0.4rem] first:ml-0">
-                    <img src="svg/nextjs.svg" alt="NextJs" title="NextJs" class="h-3 w-3" />
+            GlowPosition="20% 50%"
+            Class="h-full flex flex-col">
+            <Image
+                FallbackText="Image coming soon">
+
+            </Image>
+            <div class="flex-grow py-2">
+                <h3 class="mb-1 font-semibold text-[0.9rem]">Virtual Spaces for Real Connection</h3>
+                <p class="text-xs text-gray-500">Interactive Web App that lets you create interactive virtual rooms where people can meet,
+                    move around, and collaborate naturally—just like in real life. Host team hangouts,
+                    workshops, or social events in beautiful, customizable spaces that feel personal and engaging.</p>
+            </div>
+            <div class="flex flex-col gap-1 mt-auto">
+                <div class="flex items-center">
+                    <div class="relative z-10 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] border-[var(--color-border)]/60 p-[0.4rem] first:ml-0">
+                        <img src="svg/nextjs.svg" alt="NextJs" title="NextJs" class="h-3 w-3"/>
+                    </div>
+                    <div class="relative z-10 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] border-[var(--color-border)]/60 p-[0.4rem] ">
+                        <img src="svg/nestjs.svg" alt="NestJs" title="NestJs" class="h-3 w-3"/>
+                    </div>
+                    <div class="relative z-10 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] border-[var(--color-border)]/60 p-[0.4rem] ">
+                        <img src="svg/tailwind.svg" alt="Tailwind" title="Tailwind" class="h-3 w-3"/>
+                    </div>
+                    <div class="relative z-10 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] border-[var(--color-border)]/60 p-[0.4rem] ">
+                        <img src="svg/livekit.svg" alt="Livekit" title="LiveKit" class="h-3 w-3"/>
+                    </div>
+                    <div class="relative z-10 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] border-[var(--color-border)]/60 p-[0.4rem] ">
+                        <img src="svg/socketio.svg" alt="Socket.io" title="Socket.io" class="h-3 w-3"/>
+                    </div>
+
                 </div>
-                <div class="relative z-20 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] p-[0.4rem]">
-                    <img src="svg/nestjs.svg" alt="NestJs" title="NestJs" class="h-3 w-3"/>
+                <div class="flex items-center">
+                    <div class="relative z-10 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] border-[var(--color-border)]/60 p-[0.4rem] first:ml-0">
+                        <img src="svg/phaser-pixel-small-flat.png" alt="Phaser" title="Phaser" class="h-2"/>
+                    </div>
+                    <div class="relative z-10 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] border-[var(--color-border)]/60 p-[0.4rem] ">
+                        <img src="svg/colyseus-long.png" alt="Colyseus" title="Colyseus" class="h-2"/>
+                    </div>
                 </div>
-                <div class="relative z-30 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] p-[0.4rem]">
-                    <img src="svg/tailwind.svg" alt="Tailwind" title="Tailwind" class="h-3 w-3" />
-                </div>
-                <div class="relative z-40 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] p-[0.4rem]">
-                    <img src="svg/livekit.svg" alt="Livekit" title="LiveKit" class="h-3 w-3" />
-                </div>
-                <div class="relative z-50 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] p-[0.4rem]">
-                    <img src="svg/socketio.svg" alt="Socket.io" title="Socket.io" class="h-3 w-3" />
+            </div>
+
+        </GlowCard>
+        <GlowCard
+            Class="h-full  flex flex-col">
+            <div class="flex flex-col md:flex-col md:flex-grow">
+                <div class="md:hidden block opacity-75">
+                    <Image
+                        Src="images/guessmate.png"
+                    />
+
                 </div>
                
-            </div>
-            <div class="flex items-center">
-                <div class="relative z-10 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] p-[0.4rem] first:ml-0">
-                    <img src="svg/phaser-pixel-small-flat.png" alt="Phaser" title="Phaser" class="h-2"  />
+                <div class="md:w-[45%] w-full">
+                    <div class="py-2">
+                        <h3 class="mb-1 font-semibold text-[0.9rem]">Guess Mate Online</h3>
+                        <p class="text-xs text-gray-500">Guess Mate Online is a fast-paced multiplayer word game inspired by the classic Wordle experience.
+                            In this competitive twist, you and your opponents race in real time to crack the hidden word before anyone else.
+                            You can create custom game rooms and adjust the language to your liking.
+                            Whether you’re challenging friends or climbing the global leaderboard, Guess Mate Online offers an addictive,
+                            social way to test your vocabulary and reflexes.</p>
+                    </div>
+                    <div class="flex flex-row justify-between">
+                        <div class="flex flex-col gap-1">
+                            <div class="flex items-center">
+                                <div class="relative z-10 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] border-[var(--color-border)]/60 p-[0.4rem] first:ml-0">
+                                    <img src="svg/nextjs.svg" alt="NextJs" title="NextJs" class="h-3 w-3"/>
+                                </div>
+                                <div class="relative z-10 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] border-[var(--color-border)]/60 p-[0.4rem] ">
+                                    <img src="svg/express.svg" alt="Express" title="Express" class="h-3 w-3"/>
+                                </div>
+                                <div class="relative z-10 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] border-[var(--color-border)]/60 p-[0.4rem] ">
+                                    <img src="svg/tailwind.svg" alt="Tailwind" title="Tailwind" class="h-3 w-3"/>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="relative z-10 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] border-[var(--color-border)]/60 p-[0.4rem] first:ml-0">
+                                    <img src="svg/colyseus-long.png" alt="Colyseus" title="Colyseus" class="h-2"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <a
+                                href="https://github.com/IgorCroitoru/guess-mate-online"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex items-center gap-1 rounded-lg bg-[var(--color-bg-second)] px-2 py-1 text-[0.6rem] transition-colors hover:shadow-[inset_0_0_5px_2px_rgba(250,216,255,0.1)]">
+                                <img src="svg/github.svg" alt="GitHub" class="w-3 h-3"/>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="relative z-20 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] p-[0.4rem]">
-                    <img src="svg/colyseus-long.png" alt="Colyseus" title="Colyseus" class="h-2" />
-                </div>
-            </div>
-        </div>
+                <div class="absolute hidden md:block right-[-40%] bottom-[-10%] w-[90%]  overflow-hidden rounded-xl border-1 border-[var(--color-border)]/60 opacity-50
+                        shadow-[inset_0_0_5px_2px_rgba(250,216,255,0.2)]">
 
-    </GlowCard>
+                    <img src="images/guessmate.png"
+                         alt="GuessMte"
+                         class="h-full w-full scale-[1.2]  object-right-bottom mix-blend-overlay"/>
+                </div>
+
+            </div>
+
+
+        </GlowCard>
         <GlowCard
             Class="h-full flex flex-col"
             >
-        <Image
-         FallbackText="Image coming soon"    
-        >
-            
-        </Image>
-        <div class="p-2">
-            <h3 class="mb-1 font-semibold text-[0.9rem]">Guess Mate Online</h3>
-            <p class="text-xs text-gray-500">Guess Mate Online is a fast-paced multiplayer word game inspired by the classic Wordle experience. 
-                In this competitive twist, you and your opponents race in real time to crack the hidden word before anyone else. 
-                You can create custom game rooms and adjust the language to your liking. 
-                Whether you’re challenging friends or climbing the global leaderboard, Guess Mate Online offers an addictive, 
-                social way to test your vocabulary and reflexes.</p>
-        </div>
+                <div class="pb-2 flex-grow">
+                    <h3 class="mb-1 font-semibold text-[0.9rem]">CS2 Bot</h3>
+                    <p class="text-xs text-gray-500">CS-Bot is an automated trading and inventory management bot designed for Counter-Strike.
+                        It uses the popular <a href="https://github.com/DoctorMcKay"
+                                               class="text-[var(--color-accent)] hover:underline">DoctorMcKay</a> library to
+                        handle trade offers, inventory fetching, and account sessions.
+                        The bot establishes a persistent WebSocket connection to the main server to receive trade instructions and updates in real time,
+                        allowing for responsive and reliable operations. <br/>
+                        I’m currently planning to upgrade the architecture to use a more advanced message queue system for handling commands and events, which will improve scalability and fault tolerance as the project grows.</p>
+                </div>
+                
         <div class="flex flex-row justify-between">
-            <div class="flex flex-col gap-1">
+            <div class="flex flex-col gap-1 mt-auto">
                 <div class="flex items-center">
-                    <div class="relative z-10 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] p-[0.4rem] first:ml-0">
-                        <img src="svg/nextjs.svg" alt="NextJs" title="NextJs"  class="h-3 w-3" />
+                    <div class="relative z-10 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] border-[var(--color-border)]/60 p-[0.4rem] first:ml-0">
+                        <img src="svg/socketio.svg" alt="Socket.io" title="Socket.io" class="h-3 w-3" />
                     </div>
-                    <div class="relative z-20 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] p-[0.4rem]">
-                        <img src="svg/express.svg" alt="Express" title="Express" class="h-3 w-3"/>
-                    </div>
-                    <div class="relative z-30 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] p-[0.4rem]">
-                        <img src="svg/tailwind.svg" alt="Tailwind" title="Tailwind" class="h-3 w-3" />
-                    </div>
+                   
                 </div>
                 <div class="flex items-center">
-                    <div class="relative z-20 -ml-1 rounded-full border-1 bg-[var(--color-bg-main)] p-[0.4rem] first:ml-0">
-                        <img src="svg/colyseus-long.png" alt="Colyseus" title="Colyseus" class="h-2" />
-                    </div>
                 </div>
             </div>
+                   
             <div class="flex flex-col">
-                <a 
-                    href="https://github.com/IgorCroitoru/guess-mate-online" 
+                <a
+                    href="https://github.com/IgorCroitoru/cs2-bot"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="flex items-center gap-1 rounded-lg bg-[var(--color-bg-second)] px-2 py-1 text-xs transition-colors hover:bg-[var(--color-bg-second-hover)]"
-                >
-                    <img src="svg/github.svg" alt="GitHub" class="w-3 h-3" />
+                    class="flex items-center gap-1 rounded-lg bg-[var(--color-bg-second)] px-2 py-1 text-[0.6rem] transition-colors hover:shadow-[inset_0_0_5px_2px_rgba(250,216,255,0.1)]">
+                    <img src="svg/github.svg" alt="GitHub" class="w-3 h-3"/>
                     GitHub
                 </a>
             </div>
         </div>
-        
 
-    </GlowCard>
+        </GlowCard>
     </div>
    
 </div>

@@ -1,25 +1,42 @@
-﻿<div class="@(Class + " rounded-xl bg-[var(--color-bg-surface)]/80 p-6 relative overflow-hidden")">
-    @ChildContent
+﻿<div class="@(Class + " rounded-xl bg-[var(--color-bg-surface)]/80 p-6 relative overflow-hidden " + AdditionalClasses)">
+    <!-- Glow Effect Layer -->
+    @* <div class="@ShadowEffect"></div> *@
+    
+    @GlowContent
+   
+    <div class="relative z-10 h-full">
+        @ChildContent
+    </div>
 </div>
+
 @code {
     [Parameter]
     public string Class { get; set; } = "";
 
+    [Parameter] 
+    public RenderFragment? GlowContent { get; set; } = @<div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(176,128,198,0.15)_0%,transparent_70%)]"></div>;
     [Parameter]
     public RenderFragment? ChildContent { get; set; }
+    [Parameter]
+    public string GlowColor { get; set; } = "rgba(168, 85, 247, 0.15)"; // purple-500/15
 
     [Parameter]
-    public string BgColor { get; set; } = "bg-purple-300/10";
+    public string GlowPosition { get; set; } = "50% 30%"; // x y coordinates
 
     [Parameter]
-    public string ShadowColor { get; set; } = "rgba(250, 216, 255, 0.1)";
-
-    [Parameter]
-    public string ShadowSize { get; set; } = "5px 2px";
+    public string GlowSize { get; set; } = "70%"; // gradient size
 
     [Parameter]
     public string AdditionalClasses { get; set; } = "";
 
-    private string ShadowEffect =>
-        $"shadow-[inset_0_0_{ShadowSize.Replace(" ", "_")}_{ShadowColor.Replace(", ", "_")}]";
+    private string ShadowEffect { get; set; } = string.Empty;
+
+    
+    protected override void OnParametersSet()
+    {
+        var pos = GlowPosition.Split(' ');
+        var x = pos[0];
+        var y = pos.Length > 1 ? pos[1] : "50%";
+        GlowContent = @<div style="background-image: radial-gradient(circle at @(x) @(y), @(GlowColor) 0%, transparent @(GlowSize))" class="absolute inset-0"></div>;
+    }
 }
